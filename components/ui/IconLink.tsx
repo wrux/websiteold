@@ -7,6 +7,7 @@ type IconName = keyof typeof HeroIcons;
 
 interface IconLinkProps {
   as?: 'button' | 'Link';
+  dark?: boolean;
   className?: string;
   href?: string | null;
   icon: IconName;
@@ -17,12 +18,17 @@ const IconLink: FC<IconLinkProps> = ({
   as = 'Link',
   children,
   className,
+  dark = false,
   href,
   icon,
   onClick,
 }) => {
   const SingleIcon = HeroIcons?.[icon];
-  const wrapperClasses = cn('inline-flex group items-center', className);
+  const wrapperClasses = cn(
+    'inline-flex group items-center',
+    dark ? 'text-white' : 'text-black',
+    className
+  );
   const markup = (
     <>
       {icon && (

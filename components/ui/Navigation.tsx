@@ -1,6 +1,8 @@
-import React, { Attributes, FC, HTMLProps } from 'react';
+import React, { FC, HTMLProps } from 'react';
+import cn from 'clsx';
 
 interface NavigationProps {
+  className?: string;
   label: string;
 }
 
@@ -9,18 +11,26 @@ export const NavigationItem: FC<HTMLProps<HTMLAnchorElement>> = ({
   href,
   target,
 }) => (
-  <a key={href} href={href}>
+  <a
+    className="text-lg md:text-2xl font-semibold hover:underline focus:underline hover:text-blue-500 focus:text-blue-500"
+    href={href}
+    target={target}
+  >
     {children}
     {target === '_blank' && <span className="sr-only">opens in new tab</span>}
   </a>
 );
 
-const Navigation: FC<NavigationProps> = ({ children, label }) => (
-  <section>
-    <div className="container">
-      <nav aria-label={label}>{children}</nav>
-    </div>
-  </section>
+const Navigation: FC<NavigationProps> = ({ children, className, label }) => (
+  <nav
+    className={cn(
+      'flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8',
+      className
+    )}
+    aria-label={label}
+  >
+    {children}
+  </nav>
 );
 
 export default Navigation;

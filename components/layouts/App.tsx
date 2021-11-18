@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { Form } from '@formium/types';
-import { Brand, ContactForm, IconLink, Modal } from 'components/ui';
+import { Brand, ContactForm, Container, IconLink, Modal } from 'components/ui';
 
 interface AppLayoutProps {
   contactForm?: Form;
@@ -10,8 +10,8 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
   let [contactIsOpen, setContactIsOpen] = useState(false);
   return (
     <div className="flex min-h-screen flex-col">
-      <header>
-        <div className="flex container py-8">
+      <header className="py-8">
+        <Container className="flex">
           <Brand to="/" />
           <IconLink
             as={contactForm ? 'button' : 'Link'}
@@ -22,11 +22,23 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
           >
             callum@wrux.com
           </IconLink>
-        </div>
+        </Container>
       </header>
       <main className="flex-grow">{children}</main>
-      <footer className="bg-black">
-        <div className="flex container py-8">wrux</div>{' '}
+      <footer className="py-8 bg-black">
+        <Container className="flex">
+          <Brand to="/" dark />
+          <IconLink
+            as={contactForm ? 'button' : 'Link'}
+            dark
+            icon="MailIcon"
+            className="ml-auto"
+            href={'mailto:callum@wrux.com'}
+            onClick={contactForm ? () => setContactIsOpen(true) : null}
+          >
+            callum@wrux.com
+          </IconLink>
+        </Container>
       </footer>
       {contactForm && (
         <Modal
