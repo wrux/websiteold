@@ -18,7 +18,7 @@ const Hero: FC<HeroProps> = ({ title, subtitle }) => (
           height={192}
         />
       </div>
-      <h1 className="text-3xl font-bold uppercase">{title}</h1>
+      <h1 className="text-3xl font-bold">{title}</h1>
       {subtitle && <h2 className="mt-8 text-4xl leading-snug">{subtitle}</h2>}
     </div>
   </section>

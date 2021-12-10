@@ -37,7 +37,7 @@ const IconLink: FC<IconLinkProps> = ({
           <HeroIcons.ArrowRightIcon className="w-6 h-6" />
         </span>
       )}
-      <span className="text-lg">{children}</span>
+      <span className="text-lg text-white">{children}</span>
     </>
   );
   if (as === 'Link') {

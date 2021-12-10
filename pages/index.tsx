@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import { formium } from 'lib/formium';
 import { AppLayout } from 'components/layouts';
 import { Container, Hero, Navigation, NavigationItem } from 'components/ui';

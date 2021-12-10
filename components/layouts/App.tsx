@@ -12,22 +12,7 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
     <div className="flex min-h-screen flex-col">
       <header className="py-8">
         <Container className="flex">
-          <Brand to="/" />
-          <IconLink
-            as={contactForm ? 'button' : 'Link'}
-            icon="MailIcon"
-            className="ml-auto"
-            href={'mailto:callum@wrux.com'}
-            onClick={contactForm ? () => setContactIsOpen(true) : null}
-          >
-            callum@wrux.com
-          </IconLink>
-        </Container>
-      </header>
-      <main className="flex-grow">{children}</main>
-      <footer className="py-8 bg-black">
-        <Container className="flex">
-          <Brand to="/" dark />
+          <Brand dark to="/" />
           <IconLink
             as={contactForm ? 'button' : 'Link'}
             dark
@@ -38,6 +23,24 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
           >
             callum@wrux.com
           </IconLink>
+        </Container>
+      </header>
+      <main className="flex-grow">{children}</main>
+      <footer className="py-8">
+        <Container>
+          <div className="flex pt-4 border-t-2">
+            <Brand to="/" dark />
+            <IconLink
+              as={contactForm ? 'button' : 'Link'}
+              dark
+              icon="MailIcon"
+              className="ml-auto"
+              href={'mailto:callum@wrux.com'}
+              onClick={contactForm ? () => setContactIsOpen(true) : null}
+            >
+              callum@wrux.com
+            </IconLink>
+          </div>
         </Container>
       </footer>
       {contactForm && (
