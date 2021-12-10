@@ -19,7 +19,7 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
             icon="MailIcon"
             className="ml-auto"
             href={'mailto:callum@wrux.com'}
-            onClick={contactForm ? () => setContactIsOpen(true) : null}
+            onClick={contactForm ? () => setContactIsOpen(true) : undefined}
           >
             callum@wrux.com
           </IconLink>
@@ -36,7 +36,7 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
               icon="MailIcon"
               className="ml-auto"
               href={'mailto:callum@wrux.com'}
-              onClick={contactForm ? () => setContactIsOpen(true) : null}
+              onClick={contactForm ? () => setContactIsOpen(true) : undefined}
             >
               callum@wrux.com
             </IconLink>

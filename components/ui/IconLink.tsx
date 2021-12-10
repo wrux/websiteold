@@ -1,17 +1,16 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEventHandler } from 'react';
 import Link, { LinkProps } from 'next/link';
 import * as HeroIcons from '@heroicons/react/outline';
 import cn from 'clsx';
 
 type IconName = keyof typeof HeroIcons;
 
-interface IconLinkProps {
+interface IconLinkProps extends Pick<LinkProps, 'href'> {
   as?: 'button' | 'Link';
   dark?: boolean;
   className?: string;
-  href?: string | null;
   icon: IconName;
-  onClick?: CallableFunction | null;
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 const IconLink: FC<IconLinkProps> = ({
