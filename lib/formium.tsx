@@ -3,7 +3,9 @@ import { defaultComponents } from '@formium/react';
 import { TextareaProps, TextInputProps } from '@formium/react/dist/inputs';
 import { Button, FormControl, Input, Textarea } from '../components/common';
 
-export const formium = createClient(process.env.NEXT_PUBLIC_FORMIUM_PROJECTID, {
+const projectId: string = process.env.NEXT_PUBLIC_FORMIUM_PROJECTID!;
+
+export const formium = createClient(projectId, {
   apiToken: process.env.FORMIUM_TOKEN,
 });
 
