@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import { formium } from 'lib/formium';
 import { AppLayout } from 'components/layouts';
 import { Container, Hero, Navigation, NavigationItem } from 'components/ui';
@@ -10,6 +11,13 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ contactForm }) => (
   <AppLayout contactForm={contactForm}>
+    <Head>
+      <title>Callum Bonnyma, Web developer | wrux.com</title>
+      <meta
+        name="description"
+        content="I'm currently working remote somewhere in Europe. I love building performant and accessible websites and solving complex problems in the browser."
+      />
+    </Head>
     <Hero
       title="Hi, I'm Callum"
       subtitle="I'm currently working remote somewhere in Europe. I love building performant and accessible websites and solving complex problems in the browser."
