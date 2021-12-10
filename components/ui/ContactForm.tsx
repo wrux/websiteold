@@ -1,7 +1,8 @@
 import React, { FC, useState } from 'react';
-import { FormiumForm, defaultComponents } from '@formium/react';
-import { formium } from 'lib/formium';
+import { FormiumForm } from '@formium/react';
+import { formium, formComponents } from 'lib/formium';
 import { Form } from '@formium/types';
+import { Message } from 'components/common';
 
 interface ContactFormProps {
   form: Form;
@@ -12,21 +13,24 @@ const ContactForm: FC<ContactFormProps> = ({ form }) => {
   const [error, setError] = useState(false);
   if (error) {
     return (
-      <div>
-        <h1>Looks like there was an error. Please try again.</h1>
-      </div>
+      <Message
+        type="error"
+        message="Looks like there was an error. Please try again."
+      />
     );
   }
   if (success) {
     return (
-      <div>
-        <h1>Thank you! Your response has been recorded.</h1>
-      </div>
+      <Message
+        type="success"
+        message="Thank you! Your response has been recorded."
+      />
     );
   }
   return (
     <FormiumForm
       data={form}
+      components={formComponents}
       onSubmit={async (values) =>
         formium
           .submitForm('contact', values)
