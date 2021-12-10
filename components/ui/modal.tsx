@@ -47,13 +47,13 @@ const Modal: FC<ModalProps> = ({
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+          <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle border transition-all transform bg-black shadow-xl rounded-2xl">
             {title && (
               <div className="flex justify-between items-baseline">
                 <div>
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                    className="text-lg font-medium leading-6"
                   >
                     {title}
                   </Dialog.Title>
@@ -62,11 +62,11 @@ const Modal: FC<ModalProps> = ({
                   )}
                 </div>
                 <button onClick={onClose} aria-label="Close">
-                  <XIcon className="h-5 w-5 text-blue-500" aria-hidden />
+                  <XIcon className="h-5 w-5 text-white" aria-hidden />
                 </button>
               </div>
             )}
-            <div className="mt-2">{children}</div>
+            <div className="mt-6">{children}</div>
           </div>
         </Transition.Child>
       </div>
