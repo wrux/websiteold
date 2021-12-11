@@ -35,7 +35,10 @@ const Home: NextPage<HomeProps> = ({ contactForm }) => (
         >
           LinkedIn
         </NavigationItem>
-        <NavigationItem href="https://instagram.com/etocallum" target="_blank">
+        <NavigationItem
+          href="https://www.instagram.com/etocallum/"
+          target="_blank"
+        >
           Instagram
         </NavigationItem>
         <NavigationItem href="https://bloke.blog" target="_blank">
