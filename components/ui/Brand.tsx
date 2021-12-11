@@ -9,19 +9,19 @@ interface BrandProps {
 
 const Brand: FC<BrandProps> = ({ dark = false, to }) => {
   const markup = (
-    <span
-      className={cn(
-        'text-xl font-bold tracking-wide',
-        dark ? 'text-white' : 'text-black'
-      )}
-    >
-      wrux
-    </span>
+    <span className={cn('text-xl font-bold tracking-wide')}>wrux</span>
   );
   if (to) {
     return (
       <Link href={to}>
-        <a>{markup}</a>
+        <a
+          className={cn(
+            dark ? 'text-white' : 'text-black',
+            'hover:underline focus:underline hover:text-red-500 focus:text-red-500'
+          )}
+        >
+          {markup}
+        </a>
       </Link>
     );
   }

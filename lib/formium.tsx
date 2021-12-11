@@ -20,7 +20,12 @@ export const formComponents = {
     <div className="flex flex-col space-y-4">{children}</div>
   ),
   SubmitButton: (props: JSX.IntrinsicElements['button']) => (
-    <Button type="submit" className="ml-auto" {...props} />
+    <Button
+      type="submit"
+      className="ml-auto"
+      {...props}
+      isLoading={props.disabled}
+    />
   ),
   TextInput: (props: TextInputProps) => <Input {...props} />,
   Textarea: (props: TextareaProps) => <Textarea {...props} />,

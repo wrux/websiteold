@@ -26,6 +26,7 @@ const IconLink: FC<IconLinkProps> = ({
   const wrapperClasses = cn(
     'inline-flex group items-center',
     dark ? 'text-white' : 'text-black',
+    'hover:text-red-500 focus:text-red-500',
     className
   );
   const markup = (
@@ -36,7 +37,7 @@ const IconLink: FC<IconLinkProps> = ({
           <HeroIcons.ArrowRightIcon className="w-6 h-6" />
         </span>
       )}
-      <span className="text-lg text-white">{children}</span>
+      <span className="text-lg">{children}</span>
     </>
   );
   if (as === 'Link') {
