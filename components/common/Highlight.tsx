@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import cn from 'clsx';
 
 interface HighlightProps {
-  color: 'red' | 'green' | 'blue';
+  color?: 'red' | 'green' | 'blue';
 }
 
 const Highlight: FC<HighlightProps> = ({ children, color = 'red' }) => (
