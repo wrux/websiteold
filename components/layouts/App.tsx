@@ -1,7 +1,13 @@
 import { FC, useState } from 'react';
 import Head from 'next/head';
 import { Form } from '@formium/types';
-import { Brand, ContactForm, Container, IconLink, Modal } from 'components/ui';
+import {
+  Brand,
+  ContactForm,
+  Container,
+  IconLink,
+  Modal,
+} from '@/components/ui';
 
 interface AppLayoutProps {
   contactForm?: Form;
