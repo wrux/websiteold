@@ -32,7 +32,8 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
               href={'mailto:callum@wrux.com'}
               onClick={contactForm ? () => setContactIsOpen(true) : undefined}
             >
-              callum@wrux.com
+              <span className="md:hidden">Contact</span>
+              <span className="hidden md:block">callum@wrux.com</span>
             </IconLink>
           </Container>
         </header>
@@ -49,7 +50,8 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
                 href={'mailto:callum@wrux.com'}
                 onClick={contactForm ? () => setContactIsOpen(true) : undefined}
               >
-                callum@wrux.com
+                <span className="md:hidden">Contact</span>
+                <span className="hidden md:block">callum@wrux.com</span>
               </IconLink>
             </div>
           </Container>

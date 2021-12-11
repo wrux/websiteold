@@ -3,10 +3,9 @@ import Image from 'next/image';
 
 interface HeroProps {
   title: string;
-  subtitle?: string;
 }
 
-const Hero: FC<HeroProps> = ({ title, subtitle }) => (
+const Hero: FC<HeroProps> = ({ children, title }) => (
   <section className="py-8 md:py-16 px-8">
     <div className="max-w-4xl mx-auto text-center">
       <div className="block mx-auto mb-6">
@@ -21,9 +20,9 @@ const Hero: FC<HeroProps> = ({ title, subtitle }) => (
       <h1 className="text:lg md:text-xl  g:text-2xl xl:text-3xl font-bold">
         {title}
       </h1>
-      {subtitle && (
+      {children && (
         <h2 className="mt-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug">
-          {subtitle}
+          {children}
         </h2>
       )}
     </div>

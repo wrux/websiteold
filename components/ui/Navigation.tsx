@@ -12,7 +12,7 @@ export const NavigationItem: FC<HTMLProps<HTMLAnchorElement>> = ({
   target,
 }) => (
   <a
-    className="text-lg md:text-2xl font-semibold hover:underline focus:underline hover:text-red-500 focus:text-red-500"
+    className="text-lg md:text-2xl font-semibold hover:underline focus:underline underline-offset-4"
     href={href}
     target={target}
   >

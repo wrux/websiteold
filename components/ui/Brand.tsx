@@ -16,8 +16,8 @@ const Brand: FC<BrandProps> = ({ dark = false, to }) => {
       <Link href={to}>
         <a
           className={cn(
-            dark ? 'text-white' : 'text-black',
-            'hover:underline focus:underline hover:text-red-500 focus:text-red-500'
+            'hover:underline focus:underline underline-offset-4',
+            dark ? 'text-white' : 'text-black'
           )}
         >
           {markup}
