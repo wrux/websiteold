@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import cn from 'clsx';
-import { LoadingIndicator } from '@/components/common';
+import { LoadingIndicator } from 'components/common';
 
 type HTMLButtonProps = JSX.IntrinsicElements['button'];
 

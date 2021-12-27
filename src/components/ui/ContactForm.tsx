@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { FormiumForm } from '@formium/react';
 import { formium, formComponents } from 'lib/formium';
 import { Form } from '@formium/types';
-import { Message } from '@/components/common';
+import { Message } from 'components/common';
 
 interface ContactFormProps {
   form: Form;

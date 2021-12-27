@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { FormControlProps } from '@formium/react';
-import { Error, Small } from '@/components/common';
+import { Error, Small } from 'components/common';
 
 const FormControl = memo<FormControlProps>(function FormControl({
   children,

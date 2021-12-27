@@ -1,13 +1,7 @@
 import { FC, useState } from 'react';
 import Head from 'next/head';
 import { Form } from '@formium/types';
-import {
-  Brand,
-  ContactForm,
-  Container,
-  IconLink,
-  Modal,
-} from '@/components/ui';
+import { Brand, ContactForm, Container, IconLink, Modal } from 'components/ui';
 
 interface AppLayoutProps {
   contactForm?: Form;
@@ -23,10 +17,9 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
       <div className="flex min-h-screen flex-col">
         <header className="py-8">
           <Container className="flex">
-            <Brand dark to="/" />
+            <Brand to="/" />
             <IconLink
               as={contactForm ? 'button' : 'Link'}
-              dark
               icon="MailIcon"
               className="ml-auto"
               href={'mailto:callum@wrux.com'}
@@ -40,11 +33,10 @@ const App: FC<AppLayoutProps> = ({ children, contactForm }) => {
         <main className="flex-grow">{children}</main>
         <footer className="py-8">
           <Container>
-            <div className="flex pt-4 border-t-2">
-              <Brand to="/" dark />
+            <div className="flex pt-4 border-t-2 border-t-black dark:border-t-white">
+              <Brand to="/" />
               <IconLink
                 as={contactForm ? 'button' : 'Link'}
-                dark
                 icon="MailIcon"
                 className="ml-auto"
                 href={'mailto:callum@wrux.com'}

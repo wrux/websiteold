@@ -1,5 +1,6 @@
 import React, { FC, HTMLProps } from 'react';
 import cn from 'clsx';
+import { Typography } from 'components/common';
 
 interface NavigationProps {
   className?: string;
@@ -11,12 +12,10 @@ export const NavigationItem: FC<HTMLProps<HTMLAnchorElement>> = ({
   href,
   target,
 }) => (
-  <a
-    className="text-lg md:text-2xl font-semibold hover:underline focus:underline underline-offset-4"
-    href={href}
-    target={target}
-  >
-    {children}
+  <a className="focus-underline" href={href} target={target}>
+    <Typography as="span" type="h4">
+      {children}
+    </Typography>
     {target === '_blank' && <span className="sr-only">opens in new tab</span>}
   </a>
 );

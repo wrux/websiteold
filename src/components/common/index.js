@@ -7,3 +7,4 @@ export { default as LoadingIndicator } from './LoadingIndicator';
 export { default as Message } from './Message';
 export { default as Small } from './Small';
 export { default as Textarea } from './Textarea';
+export { default as Typography } from './Typography';

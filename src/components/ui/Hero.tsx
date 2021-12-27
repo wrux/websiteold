@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
+import { Typography } from 'components/common';
 
 interface HeroProps {
   title: string;
@@ -17,13 +18,13 @@ const Hero: FC<HeroProps> = ({ children, title }) => (
           height={192}
         />
       </div>
-      <h1 className="text:lg md:text-xl  g:text-2xl xl:text-3xl font-bold">
+      <Typography as="h1" type="h1" className="mb-6 lg:mb-12">
         {title}
-      </h1>
+      </Typography>
       {children && (
-        <h2 className="mt-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug">
+        <Typography as="h2" type="h3">
           {children}
-        </h2>
+        </Typography>
       )}
     </div>
   </section>

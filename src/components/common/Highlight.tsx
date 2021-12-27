@@ -7,7 +7,7 @@ interface HighlightProps {
 
 const Highlight: FC<HighlightProps> = ({ children, color = 'red' }) => (
   <strong
-    className={cn('bold', {
+    className={cn('bolder', {
       'text-red-500': color === 'red',
       'text-green-500': color === 'green',
       'text-blue-500': color === 'blue',

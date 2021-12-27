@@ -1,7 +1,7 @@
 import { createClient } from '@formium/client';
 import { defaultComponents } from '@formium/react';
 import { TextareaProps, TextInputProps } from '@formium/react/dist/inputs';
-import { Button, FormControl, Input, Textarea } from '../components/common';
+import { Button, FormControl, Input, Textarea } from 'components/common';
 
 const projectId: string = process.env.NEXT_PUBLIC_FORMIUM_PROJECTID!;
 

@@ -1,0 +1,9 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer utilities {
+  .focus-underline {
+    @apply hover:underline focus-visible:outline-none focus:underline underline-offset-4;
+  }
+}
