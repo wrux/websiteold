@@ -37,7 +37,7 @@ const IconLink: FC<IconLinkProps> = ({
       <Link href={href}>
         <a
           className={cn(
-            'inline-flex group items-center focus-underline',
+            'inline-flex group items-center focus:underline focus:outline-none',
             className
           )}
         >
@@ -49,7 +49,10 @@ const IconLink: FC<IconLinkProps> = ({
   const Tag = as;
   return (
     <Tag
-      className={cn('inline-flex group items-center', className)}
+      className={cn(
+        'inline-flex group items-center focus:underline focus:outline-none underline-offset-4',
+        className
+      )}
       onClick={onClick}
     >
       {markup}
